@@ -1,11 +1,16 @@
-let usr = document.getElementById("nameId").value;
-let pwd = document.getElementById("pwdId").value;
-let users = new Map();
-users = {"Jack":1234, "Arun":33453};
-alert("Nothing to say");
-function validate(){
-    if (usr === "" || pwd === ""){
-        alert("Username and password must be entered!");
-        return;
-    }
+const themeButton = document.querySelector("#theme-toggle");
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    themeButton.textContent = "☀️";
 }
+themeButton.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+        themeButton.textContent = "☀️";
+    }
+    else {
+        localStorage.setItem("theme", "light");
+        themeButton.textContent = "🌙";
+    }
+});
