@@ -201,3 +201,24 @@ section h2{
 .contact{
     padding:60px 10%;
 }
+
+/*MEDIA QUERIES*/
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .content h1{
+        font-size:48px;
+    }
+
+    .project-container{
+        flex-direction:column;
+    }
+
+    .project-card{
+        width:100%;
+    }
+}
