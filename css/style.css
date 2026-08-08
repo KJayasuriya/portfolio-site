@@ -89,14 +89,16 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 60px;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-shadow: 0px 4px 1px rgba(0, 0, 0, .16);
 }
 
 /* =========================   BRAND========================= */
 .brand {
     display: flex;
     align-items: center;
-    gap: 5px;
+    /* gap: 5px; */
 }
 
 .logo {
@@ -193,6 +195,67 @@ nav ul li a:hover {
     border-top-right-radius: var(--radius-pill);
 }
 
+.github-btn {
+    display: inline-block;
+    padding: 14px 40px;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+
+    color: var(--text-primary);
+    background: var(--bg-card);
+
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-soft);
+
+    transition: var(--transition-fast);
+}
+
+.github-btn:hover {
+    transform: translateY(-3px);
+    background: #24292f;
+    color: white;
+}
+
+.hero-focus {
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.focus-card {
+    padding: 20px 25px;
+    min-width: 200px;
+
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-medium);
+
+    box-shadow: var(--shadow-soft);
+
+    transition: var(--transition-fast);
+}
+
+.dark-mode .focus-card {
+    background: rgba(36, 36, 36, 0.65);
+    border: 1px solid var(--border-light);
+    box-shadow: var(--shadow-soft);
+}
+
+.focus-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.focus-card h3 {
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.focus-card p {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
 /* =========================   COMMON SECTION========================= */
 .section {
     padding: 80px 10%;
@@ -228,6 +291,10 @@ section h2 {
     width: 420px;
     min-height: 180px;
     transition: var(--transition-fast);
+    text-decoration: none;
+    cursor: pointer;
+
+    border-top: 4px solid var(--accent-pink);
 }
 
 .project-card h3 {
@@ -247,15 +314,6 @@ section h2 {
 
 .dark-mode .project-card:hover {
     box-shadow: var(--shadow-glow);
-}
-
-.project-card {
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.project-card {
-    border-top: 4px solid var(--accent-pink);
 }
 
 /* =========================   ABOUT SECTION========================= */
@@ -293,6 +351,47 @@ section h2 {
 
 .dark-mode .skill-card {
     box-shadow: 0 10px 25px rgba(223, 72, 129, .25);
+}
+
+.learning {
+    padding: 100px 10%;
+    background: var(--bg-main);
+}
+
+.learning h2 {
+    font-size: 42px;
+    color: var(--text-primary);
+    margin-bottom: 40px;
+}
+
+.learning-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.learning-card {
+    padding: 30px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-large);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-fast);
+}
+
+.learning-card h3 {
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.learning-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.learning-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
 }
 
 /* =========================   ABOUT & CONTACT TEXT========================= */
@@ -346,23 +445,50 @@ footer {
 /* =========================   SECTION DIVIDERS========================= */
 .about,
 .skills,
-.contact {
+.contact,
+.learning {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* =========================   MOBILE RESPONSIVE========================= */
-@media(max-width:768px) {
+
+@media (max-width: 750px) {
+
+    .learning-container {
+        grid-template-columns: 1fr;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
     nav {
         flex-direction: column;
         gap: 20px;
     }
 
+    .logo {
+        width: 140px;
+    }
+
+    .brand h1 {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+    }
+
+    .hero-focus {
+        flex-direction: column;
+    }
+
+    .focus-card {
+        width: 100%;
+    }
+
     .content {
         max-width: 100%;
+        margin-top: 50px;
     }
 
     .content h1 {
-        font-size: 48px;
+        font-size: clamp(2.2rem, 10vw, 3.5rem);
     }
 
     .project-container {
@@ -379,7 +505,4 @@ footer {
         justify-content: center;
     }
 
-    .contact-links {
-        flex-direction: column;
-    }
 }

@@ -10,30 +10,56 @@
 </head>
 
 <body>
+    <nav>
+        <div class="brand">
+            <img src="assets/logo.png" class="logo">
+            <h1>CodeSmasher</h1>
+        </div>
+        <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#learning">Learning</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-btn">
+            🌙 Dark Mode
+        </button>
+    </nav>
     <div class="hero">
-        <nav>
-            <div class="brand">
-                <img src="assets/logo.png" class="logo">
-                <h1>CodeSmasher</h1>
-            </div>
-            <ul>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button id="theme-toggle" class="theme-btn">
-                🌙 Dark Mode
-            </button>
-        </nav>
         <div class="content">
             <h1>Build. Learn. Evolve.</h1>
+
             <p>
-                Frontend development learner building educational tools,
-                technical blogs, and interactive web projects.
+                I build interactive web experiences, practical software
+                projects, and developer-focused tools while continuously
+                improving my skills.
             </p>
+
             <div class="hero-buttons">
-                <a href="projects.html" class="project-btn">View Projects</a>
+                <a href="#projects" class="project-btn">
+                    View Projects
+                </a>
+
+                <a href="https://github.com/KJayasuriya" class="github-btn" target="_blank">
+                    GitHub
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-focus">
+            <div class="focus-card">
+                <h3>Frontend</h3>
+                <p>HTML · CSS · JavaScript</p>
+            </div>
+
+            <div class="focus-card">
+                <h3>Currently Learning</h3>
+                <p>Spring Boot · REST APIs . Servlets</p>
+            </div>
+
+            <div class="focus-card">
+                <h3>Problem Solving</h3>
+                <p>DSA · Algorithms · LeetCode</p>
             </div>
         </div>
     </div>
@@ -56,15 +82,21 @@
                     and UI implementation.
                 </p>
             </a>
-            <div class="project-card upcoming">
-                <h3>AI Study Notes App</h3>
+            <a class="project-card" href="https://github.com/KJayasuriya/noteX" target="_blank">
+                <h3>noteX</h3>
                 <p>
-                    AI-assisted study platform for note
-                    summarization, concept search,
-                    quiz generation and LaTeX rendering.
-                    (In progress).
+                    Simple Notes Taking Web application where user can
+                    Add, Edit, Search and Delete notes.
                 </p>
-            </div>
+            </a>
+            <a class="project-card" href="https://github.com/KJayasuriya/memory-game" target="_blank">
+                <h3>Memory Game</h3>
+                <p>
+                    Interactive 4×4 memory card game built with vanilla HTML, CSS, and JavaScript. Features randomized
+                    cards, CSS 3D flip animations, match detection, score tracking, image preloading, responsive layout,
+                    and a 60-second game timer.
+                </p>
+            </a>
         </div>
     </section>
 
@@ -96,7 +128,45 @@
             <div class="skill-card">SQL</div>
         </div>
     </section>
+    <section class="learning" id="learning">
+        <h2>Currently Learning</h2>
 
+        <div class="learning-container">
+
+            <div class="learning-card">
+                <h3>Java & Spring Boot</h3>
+                <p>
+                    Learning backend development, REST APIs,
+                    CRUD operations, and Spring Boot fundamentals.
+                </p>
+            </div>
+
+            <div class="learning-card">
+                <h3>Data Structures & Algorithms</h3>
+                <p>
+                    Practicing DSA and algorithmic problem solving
+                    through LeetCode.
+                </p>
+            </div>
+
+            <div class="learning-card">
+                <h3>Machine Learning</h3>
+                <p>
+                    Studying regression, classification,
+                    optimization, and model evaluation.
+                </p>
+            </div>
+
+            <div class="learning-card">
+                <h3>Web Development</h3>
+                <p>
+                    Improving my frontend skills while exploring
+                    modern web development practices.
+                </p>
+            </div>
+
+        </div>
+    </section>
     <section id="contact" class="contact">
         <h2>Contact</h2>
         <p>
@@ -107,15 +177,15 @@
             <img src="assets/github-logo.png" style="width: 50px;" class="contact-card">
             <a href="https://github.com/KJayasuriya" class="contact-card">GitHub</a>
             <img src="assets/linkedin-logo.png" style="width: 50px;" class="contact-card">
-            <a href="#" class="contact-card">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/jayasuriya-kumar-1880a632a/" class="contact-card">LinkedIn</a>
             <img src="assets/gmail-logo.png" style="width: 50px;" class="contact-card">
-            <a href="mailto:jayasuriya240061@gmail.com" class="contact-card">mail</a>
+            <a href="mailto:vkjs2006@gmail.com" class="contact-card">mail</a>
         </div>
     </section>
 
 
     <footer>
-        <p>© 2026 CodeSmasher. Built using HTML, CSS & JavaScript.</p>
+        <p>© 2026 K. Jayasuriya. Built using HTML, CSS & JavaScript.</p>
     </footer>
     <script src='js/main.js'></script>
 
